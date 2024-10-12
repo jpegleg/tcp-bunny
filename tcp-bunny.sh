@@ -31,7 +31,7 @@ heavywlan0)
     tcpdump -XX -tttt -vvv -i wlan0
 ;;
 heavyfull)
-    tcpdump -nnvvXSs 9999
+    tcpdump -nnvvvXSs 0 -tttt
 ;;
 icmppingpong)
     tcpdump -nvvXSs 0 -c2 icmp
@@ -86,7 +86,10 @@ heavywlan0p)
 ;;  
 heavyfullp)
     tcpdump -nnvvXSs 9999 -w $2
-;;  
+;;
+heavyfullf)
+    tcpdump -nnvvvXSs 0 -t tttt -w $2
+;;
 icmppingpongp)
     tcpdump -nvvXSs 0 -c2 icmp -w $2
 ;;  
@@ -137,7 +140,10 @@ heavywlan0p)
 ;;  
 heavyfullp)
     tcpdump -nnvvXSs 9999 -w $2
-;;  
+;;
+heavyfullf)
+    tcpdump -nnvvvXSs 0 -tttt -w $2
+;; 
 icmppingpongp)
     tcpdump -nvvXSs 0 -c2 icmp -w $2
 ;;  
